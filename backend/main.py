@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from backend import orchestrator  # import your AI orchestrator
+import orchestrator
 
 app = FastAPI()
 
