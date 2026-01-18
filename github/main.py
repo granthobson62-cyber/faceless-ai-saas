@@ -6,6 +6,3 @@ app = FastAPI()
 def health():
     return {"status": "backend alive"}
 
-@app.post("/run-orchestrator")
-def run_orchestrator():
-    return {"message": "orchestrator stub running"}
