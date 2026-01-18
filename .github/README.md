@@ -1,12 +1,5 @@
-github acti# Faceless AI SaaS Backend
+# Faceless AI SaaS
 
-This repository contains a **Faceless AI Video Generator backend** using **FastAPI**.
+This project generates AI videos, uploads them to Wasabi S3, and returns public URLs via a FastAPI backend.
 
-## Endpoints
-
-- **GET /**  
-  Checks if the backend is alive.  
-  **Response:**
-  ```json
-  {"status": "Backend alive"}
-ons folder
+     
