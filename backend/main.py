@@ -1,20 +1,18 @@
 from fastapi import FastAPI
-import orchestrator
+from orchestrator import run_orchestrator
 
 app = FastAPI()
 
-@app.get("/")
-def root():
-    return {"status": "Backend alive"}
-
 @app.post("/run-orchestrator")
-def run_ai():
-    orchestrator.run_orchestrator()
-    return {"status": "Orchestrator executed"}
-from fastapi import FastAPI
-import os
+def run_ai_endpoint(languages: list = None):
+    """
+    Trigger the AI Orchestrator to generate videos and upload to Wasabi.
+    Optional: list of language codes
+    """
+    uploaded_urls = run_orchestrator(languages)
+    return {"uploaded": uploaded_urls}
 
 
 
 
-    }
+    
